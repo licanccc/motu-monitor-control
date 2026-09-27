@@ -1,0 +1,4 @@
+.DS_Store
+*.zip
+*.backup.*
+config.local.json

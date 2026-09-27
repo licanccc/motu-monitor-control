@@ -1,0 +1,6 @@
+{
+  "deviceUrl": "ws://127.0.0.1:1281/REPLACE_WITH_DEVICE_SERIAL",
+  "dimDb": 20,
+  "volumeStepDb": 1,
+  "httpPort": 7315
+}

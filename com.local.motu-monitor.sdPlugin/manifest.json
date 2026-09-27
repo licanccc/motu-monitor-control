@@ -1,0 +1,76 @@
+{
+  "$schema": "https://schemas.elgato.com/streamdeck/plugins/manifest.json",
+  "Actions": [
+    {
+      "UUID": "com.local.motu-monitor.mute", "Name": "Main Mix Mute",
+      "Tooltip": "只切换 Main 1–2 Mix 总线静音，并同步设备真实状态", "Icon": "assets/mute-off",
+      "Controllers": ["Keypad"], "DisableAutomaticStates": true,
+      "States": [
+        {"Name":"Main On","Image":"assets/mute-off","Title":"MAIN MUTE","FontSize":13,"FontStyle":"Bold","TitleAlignment":"bottom","TitleColor":"#FFFFFF"},
+        {"Name":"Main Muted","Image":"assets/mute-on","Title":"MAIN MUTE","FontSize":13,"FontStyle":"Bold","TitleAlignment":"bottom","TitleColor":"#FFFFFF"}
+      ]
+    },
+    {
+      "UUID": "com.local.motu-monitor.phones-mute", "Name": "Phones Mix Mute",
+      "Tooltip": "切换 Phones Mix 总线静音，并同步设备真实状态", "Icon": "assets/mute-off",
+      "Controllers": ["Keypad"], "DisableAutomaticStates": true,
+      "States": [
+        {"Name":"Phones On","Image":"assets/mute-off","Title":"PH MUTE","FontSize":14,"FontStyle":"Bold","TitleAlignment":"bottom","TitleColor":"#FFFFFF"},
+        {"Name":"Phones Muted","Image":"assets/mute-on","Title":"PH MUTE","FontSize":14,"FontStyle":"Bold","TitleAlignment":"bottom","TitleColor":"#FFFFFF"}
+      ]
+    },
+    {
+      "UUID": "com.local.motu-monitor.mic1-mute", "Name": "Mic 1 PAD",
+      "Tooltip": "切换 Input 页面 Mic 1 的 PAD，并同步设备真实状态", "Icon": "assets/pad-off",
+      "Controllers": ["Keypad"], "DisableAutomaticStates": true,
+      "States": [
+        {"Name":"PAD Off","Image":"assets/pad-off","Title":"MIC 1 PAD","FontSize":12,"FontStyle":"Bold","TitleAlignment":"bottom","TitleColor":"#FFFFFF"},
+        {"Name":"PAD On","Image":"assets/pad-on","Title":"MIC 1 PAD","FontSize":12,"FontStyle":"Bold","TitleAlignment":"bottom","TitleColor":"#FFFFFF"}
+      ]
+    },
+    {
+      "UUID": "com.local.motu-monitor.mono", "Name": "MONO",
+      "Tooltip": "切换 UltraLite mk5 监听单声道，并同步设备真实状态", "Icon": "assets/mono-off",
+      "Controllers": ["Keypad"], "DisableAutomaticStates": true,
+      "States": [
+        {"Name":"Stereo","Image":"assets/mono-off","Title":"MONO","FontSize":16,"FontStyle":"Bold","TitleAlignment":"bottom","TitleColor":"#FFFFFF"},
+        {"Name":"Mono","Image":"assets/mono-on","Title":"MONO","FontSize":16,"FontStyle":"Bold","TitleAlignment":"bottom","TitleColor":"#FFFFFF"}
+      ]
+    },
+    {
+      "UUID": "com.local.motu-monitor.dim", "Name": "DIM",
+      "Tooltip": "主监听衰减固定 dB，再按恢复", "Icon": "assets/dim-off",
+      "Controllers": ["Keypad"], "DisableAutomaticStates": true,
+      "States": [
+        {"Name":"Normal","Image":"assets/dim-off","Title":"DIM","FontSize":16,"FontStyle":"Bold","TitleAlignment":"bottom","TitleColor":"#FFFFFF"},
+        {"Name":"Dimmed","Image":"assets/dim-on","Title":"DIM","FontSize":16,"FontStyle":"Bold","TitleAlignment":"bottom","TitleColor":"#FFFFFF"}
+      ]
+    },
+    {
+      "UUID":"com.local.motu-monitor.monitor-up", "Name":"Monitor Volume +",
+      "Tooltip":"主监听音量增加 1 dB", "Icon":"assets/volume-up", "Controllers":["Keypad"], "DisableAutomaticStates":true,
+      "States":[{"Name":"Monitor Up","Image":"assets/volume-up","Title":"MON +","FontSize":13,"FontStyle":"Bold","TitleAlignment":"bottom","TitleColor":"#FFFFFF"}]
+    },
+    {
+      "UUID":"com.local.motu-monitor.monitor-down", "Name":"Monitor Volume −",
+      "Tooltip":"主监听音量降低 1 dB", "Icon":"assets/volume-down", "Controllers":["Keypad"], "DisableAutomaticStates":true,
+      "States":[{"Name":"Monitor Down","Image":"assets/volume-down","Title":"MON −","FontSize":13,"FontStyle":"Bold","TitleAlignment":"bottom","TitleColor":"#FFFFFF"}]
+    },
+    {
+      "UUID":"com.local.motu-monitor.phones-up", "Name":"Phones Volume +",
+      "Tooltip":"耳机音量增加 1 dB", "Icon":"assets/phones-up", "Controllers":["Keypad"], "DisableAutomaticStates":true,
+      "States":[{"Name":"Phones Up","Image":"assets/phones-up","Title":"PH +","FontSize":13,"FontStyle":"Bold","TitleAlignment":"bottom","TitleColor":"#FFFFFF"}]
+    },
+    {
+      "UUID":"com.local.motu-monitor.phones-down", "Name":"Phones Volume −",
+      "Tooltip":"耳机音量降低 1 dB", "Icon":"assets/phones-down", "Controllers":["Keypad"], "DisableAutomaticStates":true,
+      "States":[{"Name":"Phones Down","Image":"assets/phones-down","Title":"PH −","FontSize":13,"FontStyle":"Bold","TitleAlignment":"bottom","TitleColor":"#FFFFFF"}]
+    }
+  ],
+  "Author":"Local MOTU Bridge", "Name":"MOTU Monitor Control",
+  "Category":"MOTU Monitor Control", "CategoryIcon":"assets/category", "Icon":"assets/plugin",
+  "Description":"UltraLite mk5 / CueMix 5 的真实状态同步监听控制。",
+  "CodePath":"bin/plugin.js", "Nodejs":{"Version":"20"},
+  "OS":[{"Platform":"mac","MinimumVersion":"13"}], "Software":{"MinimumVersion":"6.6"},
+  "SDKVersion":2, "UUID":"com.local.motu-monitor", "Version":"1.3.0.0"
+}
